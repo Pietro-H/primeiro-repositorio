@@ -1,10 +1,13 @@
-curso01 = int(input("digite quantas avaliações o curso01 teve:"))
-curso02 = int(input("digite quantas avaliações o curso02 teve:"))
+peso = float(input("Digite o peso (kg): "))
+altura = float(input("Digite a altura (m): "))
 
+imc = peso / (altura ** 2)
 
-if curso01 > curso02:
-    print("curso01 teve mais avaliações")
-elif curso02 > curso01:
-    print("curso02 teve mais avaliações")
+print(f"IMC: {imc:.2f}")
+
+if imc < 18.5:
+    print("Abaixo do peso.")
+elif imc < 25:
+    print("Peso normal.")
 else:
-    print("os dois cursos tiveram as mesmas avaliações")
+    print("Acima do peso.")
